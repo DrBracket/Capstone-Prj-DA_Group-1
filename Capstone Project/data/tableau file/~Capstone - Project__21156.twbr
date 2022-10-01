@@ -1,0 +1,3194 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20222.22.0624.2136                               -->
+<workbook original-version='18.1' source-build='2022.2.0 (20222.22.0624.2136)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Item Cut %' datatype='real' default-format='p0%' name='[Category Parameter]' param-domain-type='range' role='measure' type='quantitative' value='0.'>
+        <calculation class='tableau' formula='0.' />
+        <range granularity='0.05' max='1.0' min='0.0' />
+      </column>
+    </datasource>
+    <datasource caption='Multiple Connections' inline='true' name='federated.1py5g801o9mq9g159ux2j0ktzrj5' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='distribution_centers' name='excel-direct.1stks411h97xgv1eqdvq10ors0wr'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/mikir/Desktop/Boolean - Data Analytics/Boolean-Data-Analytics/Capstone Project/data/tableau file/distribution_centers.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='products' name='excel-direct.1ct6b191rt7ymz1cy50gk1i05h4w'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/mikir/Desktop/Boolean - Data Analytics/Boolean-Data-Analytics/Capstone Project/data/tableau file/products.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='inventory_items' name='excel-direct.01z5gfc0s84mfq1eyi9nr00dq18d'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/mikir/Desktop/Boolean - Data Analytics/Boolean-Data-Analytics/Capstone Project/data/tableau file/inventory_items.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='order_items' name='excel-direct.043i3jv1qcqq8218qcpmz1v41f4h'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/mikir/Desktop/Boolean - Data Analytics/Boolean-Data-Analytics/Capstone Project/data/tableau file/order_items.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.1stks411h97xgv1eqdvq10ors0wr' name='distribution_centers - Copia' table='[&apos;distribution_centers - Copia$&apos;]' type='table'>
+          <columns gridOrigin='A1:D11:no:A1:D11:0' header='yes' outcome='6'>
+            <column datatype='integer' name='id' ordinal='0' />
+            <column datatype='string' name='name' ordinal='1' />
+            <column datatype='real' name='latitude' ordinal='2' />
+            <column datatype='real' name='longitude' ordinal='3' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='excel-direct.1stks411h97xgv1eqdvq10ors0wr' name='distribution_centers - Copia' table='[&apos;distribution_centers - Copia$&apos;]' type='table'>
+            <columns gridOrigin='A1:D11:no:A1:D11:0' header='yes' outcome='6'>
+              <column datatype='integer' name='id' ordinal='0' />
+              <column datatype='string' name='name' ordinal='1' />
+              <column datatype='real' name='latitude' ordinal='2' />
+              <column datatype='real' name='longitude' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.1ct6b191rt7ymz1cy50gk1i05h4w' name='products' table='[products$]' type='table'>
+            <columns gridOrigin='A1:I10001:no:A1:I10001:0' header='yes' outcome='2'>
+              <column datatype='integer' name='id' ordinal='0' />
+              <column datatype='real' name='cost' ordinal='1' />
+              <column datatype='string' name='category' ordinal='2' />
+              <column datatype='string' name='name' ordinal='3' />
+              <column datatype='string' name='brand' ordinal='4' />
+              <column datatype='real' name='retail_price' ordinal='5' />
+              <column datatype='string' name='department' ordinal='6' />
+              <column datatype='string' name='sku' ordinal='7' />
+              <column datatype='integer' name='distribution_center_id' ordinal='8' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.01z5gfc0s84mfq1eyi9nr00dq18d' name='inventory_items' table='[inventory_items$]' type='table'>
+            <columns gridOrigin='A1:L10001:no:A1:L10001:0' header='yes' outcome='2'>
+              <column datatype='integer' name='id' ordinal='0' />
+              <column datatype='integer' name='product_id' ordinal='1' />
+              <column datatype='string' name='created_at' ordinal='2' />
+              <column datatype='string' name='sold_at' ordinal='3' />
+              <column datatype='real' name='cost' ordinal='4' />
+              <column datatype='string' name='product_category' ordinal='5' />
+              <column datatype='string' name='product_name' ordinal='6' />
+              <column datatype='string' name='product_brand' ordinal='7' />
+              <column datatype='real' name='product_retail_price' ordinal='8' />
+              <column datatype='string' name='product_department' ordinal='9' />
+              <column datatype='string' name='product_sku' ordinal='10' />
+              <column datatype='integer' name='product_distribution_center_id' ordinal='11' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.043i3jv1qcqq8218qcpmz1v41f4h' name='order_items' table='[order_items$]' type='table'>
+            <columns gridOrigin='A1:K10001:no:A1:K10001:0' header='yes' outcome='2'>
+              <column datatype='integer' name='id' ordinal='0' />
+              <column datatype='integer' name='order_id' ordinal='1' />
+              <column datatype='integer' name='user_id' ordinal='2' />
+              <column datatype='integer' name='product_id' ordinal='3' />
+              <column datatype='integer' name='inventory_item_id' ordinal='4' />
+              <column datatype='string' name='status' ordinal='5' />
+              <column datatype='datetime' date-parse-format='yyyy-MM-dd HH:mm:ss zzz|#|#|yyyy-MM-dd HH:mm:ss.SSSSSS zzz' name='created_at' ordinal='6' />
+              <column datatype='datetime' date-parse-format='yyyy-MM-dd HH:mm:ss zzz|#|#|yyyy-MM-dd HH:mm:ss.SSSSSS zzz' name='shipped_at' ordinal='7' />
+              <column datatype='string' name='delivered_at' ordinal='8' />
+              <column datatype='string' name='returned_at' ordinal='9' />
+              <column datatype='real' name='sale_price' ordinal='10' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[brand]' value='[products].[brand]' />
+          <map key='[category]' value='[products].[category]' />
+          <map key='[cost (inventory!items)]' value='[inventory_items].[cost]' />
+          <map key='[cost]' value='[products].[cost]' />
+          <map key='[created_at (order!items)]' value='[order_items].[created_at]' />
+          <map key='[created_at]' value='[inventory_items].[created_at]' />
+          <map key='[delivered_at]' value='[order_items].[delivered_at]' />
+          <map key='[department]' value='[products].[department]' />
+          <map key='[distribution_center_id]' value='[products].[distribution_center_id]' />
+          <map key='[id (inventory!items)]' value='[inventory_items].[id]' />
+          <map key='[id (order!items)]' value='[order_items].[id]' />
+          <map key='[id (products)]' value='[products].[id]' />
+          <map key='[id]' value='[distribution_centers - Copia].[id]' />
+          <map key='[inventory_item_id]' value='[order_items].[inventory_item_id]' />
+          <map key='[latitude]' value='[distribution_centers - Copia].[latitude]' />
+          <map key='[longitude]' value='[distribution_centers - Copia].[longitude]' />
+          <map key='[name (products)]' value='[products].[name]' />
+          <map key='[name]' value='[distribution_centers - Copia].[name]' />
+          <map key='[order_id]' value='[order_items].[order_id]' />
+          <map key='[product_brand]' value='[inventory_items].[product_brand]' />
+          <map key='[product_category]' value='[inventory_items].[product_category]' />
+          <map key='[product_department]' value='[inventory_items].[product_department]' />
+          <map key='[product_distribution_center_id]' value='[inventory_items].[product_distribution_center_id]' />
+          <map key='[product_id (order!items)]' value='[order_items].[product_id]' />
+          <map key='[product_id]' value='[inventory_items].[product_id]' />
+          <map key='[product_name]' value='[inventory_items].[product_name]' />
+          <map key='[product_retail_price]' value='[inventory_items].[product_retail_price]' />
+          <map key='[product_sku]' value='[inventory_items].[product_sku]' />
+          <map key='[retail_price]' value='[products].[retail_price]' />
+          <map key='[returned_at]' value='[order_items].[returned_at]' />
+          <map key='[sale_price]' value='[order_items].[sale_price]' />
+          <map key='[shipped_at]' value='[order_items].[shipped_at]' />
+          <map key='[sku]' value='[products].[sku]' />
+          <map key='[sold_at]' value='[inventory_items].[sold_at]' />
+          <map key='[status]' value='[order_items].[status]' />
+          <map key='[user_id]' value='[order_items].[user_id]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[distribution_centers - Copia]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:D11:no:A1:D11:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[products]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:I10001:no:A1:I10001:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[inventory_items]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:L10001:no:A1:L10001:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[order_items]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:K10001:no:A1:K10001:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[distribution_centers - Copia]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[distribution!centers - Copia_1DBBC6CF0AE74C3B9A9E036249501D28]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[name]</local-name>
+            <parent-name>[distribution_centers - Copia]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[distribution!centers - Copia_1DBBC6CF0AE74C3B9A9E036249501D28]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[latitude]</local-name>
+            <parent-name>[distribution_centers - Copia]</parent-name>
+            <remote-alias>latitude</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[distribution!centers - Copia_1DBBC6CF0AE74C3B9A9E036249501D28]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[longitude]</local-name>
+            <parent-name>[distribution_centers - Copia]</parent-name>
+            <remote-alias>longitude</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[distribution!centers - Copia_1DBBC6CF0AE74C3B9A9E036249501D28]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id (products)]</local-name>
+            <parent-name>[products]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[products_47C204ECA50D442691CBE7EA1318F085]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cost</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[cost]</local-name>
+            <parent-name>[products]</parent-name>
+            <remote-alias>cost</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[products_47C204ECA50D442691CBE7EA1318F085]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>category</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[category]</local-name>
+            <parent-name>[products]</parent-name>
+            <remote-alias>category</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[products_47C204ECA50D442691CBE7EA1318F085]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[name (products)]</local-name>
+            <parent-name>[products]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[products_47C204ECA50D442691CBE7EA1318F085]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>brand</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[brand]</local-name>
+            <parent-name>[products]</parent-name>
+            <remote-alias>brand</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[products_47C204ECA50D442691CBE7EA1318F085]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>retail_price</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[retail_price]</local-name>
+            <parent-name>[products]</parent-name>
+            <remote-alias>retail_price</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[products_47C204ECA50D442691CBE7EA1318F085]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>department</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[department]</local-name>
+            <parent-name>[products]</parent-name>
+            <remote-alias>department</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[products_47C204ECA50D442691CBE7EA1318F085]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sku</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[sku]</local-name>
+            <parent-name>[products]</parent-name>
+            <remote-alias>sku</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[products_47C204ECA50D442691CBE7EA1318F085]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>distribution_center_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[distribution_center_id]</local-name>
+            <parent-name>[products]</parent-name>
+            <remote-alias>distribution_center_id</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[products_47C204ECA50D442691CBE7EA1318F085]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id (inventory!items)]</local-name>
+            <parent-name>[inventory_items]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[inventory!items_CC1C55EF787B42D09A8B12CE5F47FD74]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[product_id]</local-name>
+            <parent-name>[inventory_items]</parent-name>
+            <remote-alias>product_id</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[inventory!items_CC1C55EF787B42D09A8B12CE5F47FD74]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>created_at</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[created_at]</local-name>
+            <parent-name>[inventory_items]</parent-name>
+            <remote-alias>created_at</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[inventory!items_CC1C55EF787B42D09A8B12CE5F47FD74]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sold_at</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[sold_at]</local-name>
+            <parent-name>[inventory_items]</parent-name>
+            <remote-alias>sold_at</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[inventory!items_CC1C55EF787B42D09A8B12CE5F47FD74]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cost</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[cost (inventory!items)]</local-name>
+            <parent-name>[inventory_items]</parent-name>
+            <remote-alias>cost</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[inventory!items_CC1C55EF787B42D09A8B12CE5F47FD74]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_category</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[product_category]</local-name>
+            <parent-name>[inventory_items]</parent-name>
+            <remote-alias>product_category</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[inventory!items_CC1C55EF787B42D09A8B12CE5F47FD74]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[product_name]</local-name>
+            <parent-name>[inventory_items]</parent-name>
+            <remote-alias>product_name</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[inventory!items_CC1C55EF787B42D09A8B12CE5F47FD74]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_brand</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[product_brand]</local-name>
+            <parent-name>[inventory_items]</parent-name>
+            <remote-alias>product_brand</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[inventory!items_CC1C55EF787B42D09A8B12CE5F47FD74]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_retail_price</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[product_retail_price]</local-name>
+            <parent-name>[inventory_items]</parent-name>
+            <remote-alias>product_retail_price</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[inventory!items_CC1C55EF787B42D09A8B12CE5F47FD74]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_department</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[product_department]</local-name>
+            <parent-name>[inventory_items]</parent-name>
+            <remote-alias>product_department</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[inventory!items_CC1C55EF787B42D09A8B12CE5F47FD74]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_sku</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[product_sku]</local-name>
+            <parent-name>[inventory_items]</parent-name>
+            <remote-alias>product_sku</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[inventory!items_CC1C55EF787B42D09A8B12CE5F47FD74]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_distribution_center_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[product_distribution_center_id]</local-name>
+            <parent-name>[inventory_items]</parent-name>
+            <remote-alias>product_distribution_center_id</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[inventory!items_CC1C55EF787B42D09A8B12CE5F47FD74]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id (order!items)]</local-name>
+            <parent-name>[order_items]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[order!items_76480FC8DD274FD1BEE0E30E120613AC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[order_id]</local-name>
+            <parent-name>[order_items]</parent-name>
+            <remote-alias>order_id</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[order!items_76480FC8DD274FD1BEE0E30E120613AC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>user_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[user_id]</local-name>
+            <parent-name>[order_items]</parent-name>
+            <remote-alias>user_id</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[order!items_76480FC8DD274FD1BEE0E30E120613AC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[product_id (order!items)]</local-name>
+            <parent-name>[order_items]</parent-name>
+            <remote-alias>product_id</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[order!items_76480FC8DD274FD1BEE0E30E120613AC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>inventory_item_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[inventory_item_id]</local-name>
+            <parent-name>[order_items]</parent-name>
+            <remote-alias>inventory_item_id</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[order!items_76480FC8DD274FD1BEE0E30E120613AC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>status</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[status]</local-name>
+            <parent-name>[order_items]</parent-name>
+            <remote-alias>status</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[order!items_76480FC8DD274FD1BEE0E30E120613AC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>created_at</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[created_at (order!items)]</local-name>
+            <parent-name>[order_items]</parent-name>
+            <remote-alias>created_at</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[order!items_76480FC8DD274FD1BEE0E30E120613AC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>shipped_at</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[shipped_at]</local-name>
+            <parent-name>[order_items]</parent-name>
+            <remote-alias>shipped_at</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[order!items_76480FC8DD274FD1BEE0E30E120613AC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>delivered_at</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[delivered_at]</local-name>
+            <parent-name>[order_items]</parent-name>
+            <remote-alias>delivered_at</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[order!items_76480FC8DD274FD1BEE0E30E120613AC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>returned_at</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[returned_at]</local-name>
+            <parent-name>[order_items]</parent-name>
+            <remote-alias>returned_at</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LIT_RIT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[order!items_76480FC8DD274FD1BEE0E30E120613AC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sale_price</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[sale_price]</local-name>
+            <parent-name>[order_items]</parent-name>
+            <remote-alias>sale_price</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[order!items_76480FC8DD274FD1BEE0E30E120613AC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Item cut what-if' datatype='real' name='[Calculation_938719061677752320]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT([id (inventory!items)])*(1-[Parameters].[Category Parameter])' />
+      </column>
+      <column caption='City/Country' datatype='string' name='[Name (copy)_1656198776925683712]' role='dimension' semantic-role='[County].[Name]' type='nominal'>
+        <calculation class='tableau' formula='[name]' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='distribution_centers - Copia' datatype='table' name='[__tableau_internal_object_id__].[distribution!centers - Copia_1DBBC6CF0AE74C3B9A9E036249501D28]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='inventory_items' datatype='table' name='[__tableau_internal_object_id__].[inventory!items_CC1C55EF787B42D09A8B12CE5F47FD74]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='order_items' datatype='table' name='[__tableau_internal_object_id__].[order!items_76480FC8DD274FD1BEE0E30E120613AC]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='products' datatype='table' name='[__tableau_internal_object_id__].[products_47C204ECA50D442691CBE7EA1318F085]' role='measure' type='quantitative' />
+      <column caption='Brand' datatype='string' name='[brand]' role='dimension' type='nominal' />
+      <column caption='Category' datatype='string' name='[category]' role='dimension' type='nominal' />
+      <column caption='Cost (Inventory!Items)' datatype='real' name='[cost (inventory!items)]' role='measure' type='quantitative' />
+      <column caption='Cost' datatype='real' name='[cost]' role='measure' type='quantitative' />
+      <column caption='Created At (Order!Items)' datatype='datetime' name='[created_at (order!items)]' role='dimension' type='ordinal' />
+      <column caption='Created At' datatype='string' name='[created_at]' role='dimension' type='nominal' />
+      <column caption='Delivered At' datatype='string' name='[delivered_at]' role='dimension' type='nominal' />
+      <column caption='Department' datatype='string' name='[department]' role='dimension' type='nominal' />
+      <column caption='Distribution Center Id' datatype='integer' name='[distribution_center_id]' role='dimension' type='ordinal' />
+      <column caption='Id (Inventory!Items)' datatype='integer' name='[id (inventory!items)]' role='dimension' type='ordinal' />
+      <column caption='Id (Order!Items)' datatype='integer' name='[id (order!items)]' role='dimension' type='ordinal' />
+      <column caption='Id (Products)' datatype='integer' name='[id (products)]' role='dimension' type='ordinal' />
+      <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+      <column caption='Inventory Item Id' datatype='integer' name='[inventory_item_id]' role='dimension' type='ordinal' />
+      <column aggregation='Avg' caption='Latitude' datatype='real' name='[latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Longitude' datatype='real' name='[longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Name (Products)' datatype='string' name='[name (products)]' role='dimension' type='nominal' />
+      <column caption='City' datatype='string' name='[name]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Order Id' datatype='integer' name='[order_id]' role='dimension' type='ordinal' />
+      <column caption='Product Brand' datatype='string' name='[product_brand]' role='dimension' type='nominal' />
+      <column caption='Product Category' datatype='string' name='[product_category]' role='dimension' type='nominal' />
+      <column caption='Product Department' datatype='string' name='[product_department]' role='dimension' type='nominal' />
+      <column caption='Product Distribution Center Id' datatype='integer' name='[product_distribution_center_id]' role='dimension' type='ordinal' />
+      <column caption='Product Id (Order!Items)' datatype='integer' name='[product_id (order!items)]' role='dimension' type='ordinal' />
+      <column caption='Product Id' datatype='integer' name='[product_id]' role='dimension' type='ordinal' />
+      <column caption='Product Name' datatype='string' name='[product_name]' role='dimension' type='nominal' />
+      <column caption='Product Retail Price' datatype='real' name='[product_retail_price]' role='measure' type='quantitative' />
+      <column caption='Product Sku' datatype='string' name='[product_sku]' role='dimension' type='nominal' />
+      <column caption='Retail Price' datatype='real' name='[retail_price]' role='measure' type='quantitative' />
+      <column caption='Returned At' datatype='string' name='[returned_at]' role='dimension' type='nominal' />
+      <column caption='Sale Price' datatype='real' name='[sale_price]' role='measure' type='quantitative' />
+      <column caption='Shipped At' datatype='datetime' name='[shipped_at]' role='dimension' type='ordinal' />
+      <column caption='Sku' datatype='string' name='[sku]' role='dimension' type='nominal' />
+      <column caption='Sold At' datatype='string' name='[sold_at]' role='dimension' type='nominal' />
+      <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+      <column caption='User Id' datatype='integer' name='[user_id]' role='dimension' type='ordinal' />
+      <column-instance column='[__tableau_internal_object_id__].[distribution!centers - Copia_1DBBC6CF0AE74C3B9A9E036249501D28]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:distribution!centers - Copia_1DBBC6CF0AE74C3B9A9E036249501D28:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[__tableau_internal_object_id__].[inventory!items_CC1C55EF787B42D09A8B12CE5F47FD74]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:inventory!items_CC1C55EF787B42D09A8B12CE5F47FD74:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[__tableau_internal_object_id__].[order!items_76480FC8DD274FD1BEE0E30E120613AC]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:order!items_76480FC8DD274FD1BEE0E30E120613AC:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[__tableau_internal_object_id__].[products_47C204ECA50D442691CBE7EA1318F085]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:products_47C204ECA50D442691CBE7EA1318F085:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[latitude]' derivation='Avg' name='[avg:latitude:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[longitude]' derivation='Avg' name='[avg:longitude:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[sold_at]' derivation='Count' name='[cnt:sold_at:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[id (inventory!items)]' derivation='CountD' name='[ctd:id (inventory!items):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[sold_at]' derivation='CountD' name='[ctd:sold_at:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[name]' derivation='None' name='[none:name:nk]' pivot='key' type='nominal' />
+      <column-instance column='[product_category]' derivation='None' name='[none:product_category:nk]' pivot='key' type='nominal' />
+      <column-instance column='[product_department]' derivation='None' name='[none:product_department:nk]' pivot='key' type='nominal' />
+      <column-instance column='[status]' derivation='None' name='[none:status:nk]' pivot='key' type='nominal' />
+      <column-instance column='[cost (inventory!items)]' derivation='Sum' name='[sum:cost (inventory!items):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[cost]' derivation='Sum' name='[sum:cost:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[product_retail_price]' derivation='Sum' name='[sum:product_retail_price:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[retail_price]' derivation='Sum' name='[sum:retail_price:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[sale_price]' derivation='Sum' name='[sum:sale_price:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[shipped_at]' derivation='Year-Trunc' name='[tyr:shipped_at:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[Calculation_938719061677752320]' derivation='User' name='[usr:Calculation_938719061677752320:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[shipped_at]' derivation='Year' name='[yr:shipped_at:ok]' pivot='key' type='ordinal' />
+      <group caption='Action (City)' hidden='true' name='[Action (City)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[name]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (City,Status)' hidden='true' name='[Action (City,Status)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[name]' />
+          <groupfilter function='level-members' level='[status]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Product Category)' hidden='true' name='[Action (Product Category)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[product_category]' />
+        </groupfilter>
+      </group>
+      <group hidden='true' name='[Exclusions (Status,YEAR(Shipped At))]' name-style='unqualified' user:auto-column='exclude'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:status:nk]' />
+          <groupfilter function='level-members' level='[yr:shipped_at:ok]' />
+        </groupfilter>
+      </group>
+      <group caption='Tooltip (City)' hidden='true' name='[Tooltip (City)]' name-style='unqualified' user:auto-column='sheet_link' user:ui-vit-column='true'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[name]' />
+        </groupfilter>
+      </group>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' rowDisplayCount='100' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:product_category:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Accessories&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Intimates&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Leggings&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Jumpsuits &amp; Rompers&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Swim&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Pants&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Outerwear &amp; Coats&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Clothing Sets&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Sleep &amp; Lounge&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Socks &amp; Hosiery&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Blazers &amp; Jackets&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Jeans&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Suits &amp; Sport Coats&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Shorts&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Socks&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Dresses&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Plus&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Pants &amp; Capris&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Active&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Sweaters&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Skirts&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Tops &amp; Tees&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Maternity&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Underwear&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Fashion Hoodies &amp; Sweatshirts&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Suits&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:product_department:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Men&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Women&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[tyr:shipped_at:ok]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>#2022-01-01 00:00:00#</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>#2021-01-01 00:00:00#</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>#2020-01-01 00:00:00#</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>#2019-01-01 00:00:00#</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;[federated.1py5g801o9mq9g159ux2j0ktzrj5].[sum:cost:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1py5g801o9mq9g159ux2j0ktzrj5]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1py5g801o9mq9g159ux2j0ktzrj5].[ctd:id (inventory!items):qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1py5g801o9mq9g159ux2j0ktzrj5].[usr:Calculation_938719061677752320:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1py5g801o9mq9g159ux2j0ktzrj5].[avg:latitude:qk]&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;[federated.1py5g801o9mq9g159ux2j0ktzrj5].[sum:product_retail_price:qk]&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;[federated.1py5g801o9mq9g159ux2j0ktzrj5].[sum:retail_price:qk]&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;[federated.1py5g801o9mq9g159ux2j0ktzrj5].[__tableau_internal_object_id__].[cnt:inventory!items_CC1C55EF787B42D09A8B12CE5F47FD74:qk]&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;[federated.1py5g801o9mq9g159ux2j0ktzrj5].[__tableau_internal_object_id__].[cnt:distribution!centers - Copia_1DBBC6CF0AE74C3B9A9E036249501D28:qk]&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;[federated.1py5g801o9mq9g159ux2j0ktzrj5].[avg:longitude:qk]&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;[federated.1py5g801o9mq9g159ux2j0ktzrj5].[sum:sale_price:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[Parameters].[Category Parameter]&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;[federated.1py5g801o9mq9g159ux2j0ktzrj5].[__tableau_internal_object_id__].[cnt:order!items_76480FC8DD274FD1BEE0E30E120613AC:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1py5g801o9mq9g159ux2j0ktzrj5].[cnt:sold_at:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1py5g801o9mq9g159ux2j0ktzrj5].[ctd:sold_at:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;[federated.1py5g801o9mq9g159ux2j0ktzrj5].[sum:cost (inventory!items):qk]&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;[federated.1py5g801o9mq9g159ux2j0ktzrj5].[__tableau_internal_object_id__].[cnt:products_47C204ECA50D442691CBE7EA1318F085:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:name:nk]' palette='color_blind_10_0' type='palette'>
+            <map to='#1170aa'>
+              <bucket>&quot;Charleston SC&quot;</bucket>
+            </map>
+            <map to='#57606c'>
+              <bucket>&quot;Los Angeles CA&quot;</bucket>
+            </map>
+            <map to='#5fa2ce'>
+              <bucket>&quot;Memphis TN&quot;</bucket>
+            </map>
+            <map to='#7b848f'>
+              <bucket>&quot;New Orleans LA&quot;</bucket>
+            </map>
+            <map to='#a3acb9'>
+              <bucket>&quot;Houston TX&quot;</bucket>
+            </map>
+            <map to='#a3cce9'>
+              <bucket>&quot;Philadelphia PA&quot;</bucket>
+            </map>
+            <map to='#c85200'>
+              <bucket>&quot;Mobile AL&quot;</bucket>
+            </map>
+            <map to='#c8d0d9'>
+              <bucket>&quot;Savannah GA&quot;</bucket>
+            </map>
+            <map to='#fc7d0b'>
+              <bucket>&quot;Chicago IL&quot;</bucket>
+            </map>
+            <map to='#ffbc79'>
+              <bucket>&quot;Port Authority of New York/New Jersey NY/NJ&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:status:nk]' palette='color_blind_10_0' type='palette'>
+            <map to='#1170aa'>
+              <bucket>&quot;Cancelled&quot;</bucket>
+            </map>
+            <map to='#57606c'>
+              <bucket>&quot;Returned&quot;</bucket>
+            </map>
+            <map to='#5fa2ce'>
+              <bucket>&quot;Shipped&quot;</bucket>
+            </map>
+            <map to='#a3acb9'>
+              <bucket>&quot;Processing&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#fc7d0b'>
+              <bucket>&quot;Complete&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Italy&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Item Cut %' datatype='real' default-format='p0%' name='[Category Parameter]' param-domain-type='range' role='measure' type='quantitative' value='0.'>
+          <calculation class='tableau' formula='0.' />
+          <range granularity='0.05' max='1.0' min='0.0' />
+        </column>
+      </datasource-dependencies>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='distribution_centers - Copia' id='distribution!centers - Copia_1DBBC6CF0AE74C3B9A9E036249501D28'>
+            <properties context=''>
+              <relation connection='excel-direct.1stks411h97xgv1eqdvq10ors0wr' name='distribution_centers - Copia' table='[&apos;distribution_centers - Copia$&apos;]' type='table'>
+                <columns gridOrigin='A1:D11:no:A1:D11:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='id' ordinal='0' />
+                  <column datatype='string' name='name' ordinal='1' />
+                  <column datatype='real' name='latitude' ordinal='2' />
+                  <column datatype='real' name='longitude' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='inventory_items' id='inventory!items_CC1C55EF787B42D09A8B12CE5F47FD74'>
+            <properties context=''>
+              <relation connection='excel-direct.01z5gfc0s84mfq1eyi9nr00dq18d' name='inventory_items' table='[inventory_items$]' type='table'>
+                <columns gridOrigin='A1:L10001:no:A1:L10001:0' header='yes' outcome='2'>
+                  <column datatype='integer' name='id' ordinal='0' />
+                  <column datatype='integer' name='product_id' ordinal='1' />
+                  <column datatype='string' name='created_at' ordinal='2' />
+                  <column datatype='string' name='sold_at' ordinal='3' />
+                  <column datatype='real' name='cost' ordinal='4' />
+                  <column datatype='string' name='product_category' ordinal='5' />
+                  <column datatype='string' name='product_name' ordinal='6' />
+                  <column datatype='string' name='product_brand' ordinal='7' />
+                  <column datatype='real' name='product_retail_price' ordinal='8' />
+                  <column datatype='string' name='product_department' ordinal='9' />
+                  <column datatype='string' name='product_sku' ordinal='10' />
+                  <column datatype='integer' name='product_distribution_center_id' ordinal='11' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='order_items' id='order!items_76480FC8DD274FD1BEE0E30E120613AC'>
+            <properties context=''>
+              <relation connection='excel-direct.043i3jv1qcqq8218qcpmz1v41f4h' name='order_items' table='[order_items$]' type='table'>
+                <columns gridOrigin='A1:K10001:no:A1:K10001:0' header='yes' outcome='2'>
+                  <column datatype='integer' name='id' ordinal='0' />
+                  <column datatype='integer' name='order_id' ordinal='1' />
+                  <column datatype='integer' name='user_id' ordinal='2' />
+                  <column datatype='integer' name='product_id' ordinal='3' />
+                  <column datatype='integer' name='inventory_item_id' ordinal='4' />
+                  <column datatype='string' name='status' ordinal='5' />
+                  <column datatype='datetime' date-parse-format='yyyy-MM-dd HH:mm:ss zzz|#|#|yyyy-MM-dd HH:mm:ss.SSSSSS zzz' name='created_at' ordinal='6' />
+                  <column datatype='datetime' date-parse-format='yyyy-MM-dd HH:mm:ss zzz|#|#|yyyy-MM-dd HH:mm:ss.SSSSSS zzz' name='shipped_at' ordinal='7' />
+                  <column datatype='string' name='delivered_at' ordinal='8' />
+                  <column datatype='string' name='returned_at' ordinal='9' />
+                  <column datatype='real' name='sale_price' ordinal='10' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='products' id='products_47C204ECA50D442691CBE7EA1318F085'>
+            <properties context=''>
+              <relation connection='excel-direct.1ct6b191rt7ymz1cy50gk1i05h4w' name='products' table='[products$]' type='table'>
+                <columns gridOrigin='A1:I10001:no:A1:I10001:0' header='yes' outcome='2'>
+                  <column datatype='integer' name='id' ordinal='0' />
+                  <column datatype='real' name='cost' ordinal='1' />
+                  <column datatype='string' name='category' ordinal='2' />
+                  <column datatype='string' name='name' ordinal='3' />
+                  <column datatype='string' name='brand' ordinal='4' />
+                  <column datatype='real' name='retail_price' ordinal='5' />
+                  <column datatype='string' name='department' ordinal='6' />
+                  <column datatype='string' name='sku' ordinal='7' />
+                  <column datatype='integer' name='distribution_center_id' ordinal='8' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='AND'>
+              <expression op='='>
+                <expression op='[id (products)]' />
+                <expression op='[product_id]' />
+              </expression>
+              <expression op='='>
+                <expression op='[distribution_center_id]' />
+                <expression op='[product_distribution_center_id]' />
+              </expression>
+            </expression>
+            <first-end-point object-id='products_47C204ECA50D442691CBE7EA1318F085' />
+            <second-end-point object-id='inventory!items_CC1C55EF787B42D09A8B12CE5F47FD74' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[id (inventory!items)]' />
+              <expression op='[inventory_item_id]' />
+            </expression>
+            <first-end-point object-id='inventory!items_CC1C55EF787B42D09A8B12CE5F47FD74' />
+            <second-end-point object-id='order!items_76480FC8DD274FD1BEE0E30E120613AC' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[id]' />
+              <expression op='[distribution_center_id]' />
+            </expression>
+            <first-end-point object-id='distribution!centers - Copia_1DBBC6CF0AE74C3B9A9E036249501D28' />
+            <second-end-point object-id='products_47C204ECA50D442691CBE7EA1318F085' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <actions>
+    <action caption='Filter by Map' name='[Action2_5D99F482A83B48369B16E856AFD338C9]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Geo Items/Cat' type='sheet' worksheet='Distribution Centers Geo' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Geo Items/Cat' />
+      </command>
+    </action>
+    <action caption='Filter 1 (generated) 1 1' name='[Action3_63A7EEFA49C24229B8250DB4575F3BF2]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Item Stock What-If' type='sheet' worksheet='Distribution Centers Geo' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Item Stock What-If' />
+      </command>
+    </action>
+    <action caption='Filter 1 (generated)' name='[Action4_F20A7ABD4F364F349D32B15C774B5102]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Status Performance' type='sheet' worksheet='Status Performance WB' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Status Performance' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Bubble Chart'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Multiple Connections' name='federated.1py5g801o9mq9g159ux2j0ktzrj5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1py5g801o9mq9g159ux2j0ktzrj5'>
+            <column-instance column='[id (inventory!items)]' derivation='Count' name='[cnt:id (inventory!items):qk]' pivot='key' type='quantitative' />
+            <column caption='Id (Inventory!Items)' datatype='integer' name='[id (inventory!items)]' role='dimension' type='ordinal' />
+            <column-instance column='[shipped_at]' derivation='Max' name='[max:shipped_at:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[shipped_at]' derivation='Min' name='[min:shipped_at:ok]' pivot='key' type='ordinal' />
+            <column caption='City' datatype='string' name='[name]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column-instance column='[name]' derivation='None' name='[none:name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[status]' derivation='None' name='[none:status:nk]' pivot='key' type='nominal' />
+            <column caption='Shipped At' datatype='datetime' name='[shipped_at]' role='dimension' type='ordinal' />
+            <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+            <column-instance column='[shipped_at]' derivation='Year' name='[yr:shipped_at:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[Exclusions (Status,YEAR(Shipped At))]' filter-group='3'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='crossjoin'>
+                <groupfilter function='level-members' level='[none:status:nk]' />
+                <groupfilter function='level-members' level='[yr:shipped_at:ok]' />
+              </groupfilter>
+              <groupfilter function='reorder-dimensionality'>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[yr:shipped_at:ok]' member='%null%' />
+                  <groupfilter function='union'>
+                    <groupfilter function='member' level='[none:status:nk]' member='%null%' />
+                    <groupfilter function='member' level='[none:status:nk]' member='&quot;Cancelled&quot;' />
+                    <groupfilter function='member' level='[none:status:nk]' member='&quot;Processing&quot;' />
+                  </groupfilter>
+                </groupfilter>
+                <order>
+                  <hierarchy name='[none:status:nk]' />
+                  <hierarchy name='[yr:shipped_at:ok]' />
+                </order>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:name:nk]'>
+            <groupfilter function='level-members' level='[none:name:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:status:nk]'>
+            <groupfilter function='level-members' level='[none:status:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:name:nk]</column>
+            <column>[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:status:nk]</column>
+            <column>[federated.1py5g801o9mq9g159ux2j0ktzrj5].[Exclusions (Status,YEAR(Shipped At))]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='line-pattern-only' value='solid' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='border-width' scope='cols' value='0' />
+            <format attr='border-style' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:status:nk]' value='false' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='line-pattern-only' value='solid' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <color column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:status:nk]' />
+              <size column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[cnt:id (inventory!items):qk]' />
+              <tooltip column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[min:shipped_at:ok]' />
+              <tooltip column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[max:shipped_at:ok]' />
+              <text column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[yr:shipped_at:ok]' />
+              <text column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[cnt:id (inventory!items):qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#ffffff' fontsize='14'><![CDATA[<[federated.1py5g801o9mq9g159ux2j0ktzrj5].[yr:shipped_at:ok]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#ffffff' fontsize='11'>Nr. Items: </run>
+                <run bold='true' fontcolor='#ffffff' fontsize='11'><![CDATA[<[federated.1py5g801o9mq9g159ux2j0ktzrj5].[cnt:id (inventory!items):qk]>]]></run>
+                <run bold='true' fontcolor='#ffffff' fontsize='11'>Æ&#10;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{FCE25586-2EE3-4A81-B09C-67A64D9A2661}' />
+    </worksheet>
+    <worksheet name='Distribution Centers Geo'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Multiple Connections' name='federated.1py5g801o9mq9g159ux2j0ktzrj5' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1py5g801o9mq9g159ux2j0ktzrj5'>
+            <column caption='City/Country' datatype='string' name='[Name (copy)_1656198776925683712]' role='dimension' semantic-role='[County].[Name]' type='nominal'>
+              <calculation class='tableau' formula='[name]' />
+            </column>
+            <column-instance column='[latitude]' derivation='Avg' name='[avg:latitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[longitude]' derivation='Avg' name='[avg:longitude:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Avg' caption='Latitude' datatype='real' name='[latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' caption='Longitude' datatype='real' name='[longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column caption='City' datatype='string' name='[name]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column-instance column='[Name (copy)_1656198776925683712]' derivation='None' name='[none:Name (copy)_1656198776925683712:nk]' pivot='key' type='nominal' />
+            <column-instance column='[name]' derivation='None' name='[none:name:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:Name (copy)_1656198776925683712:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Name (copy)_1656198776925683712:nk]' />
+              <groupfilter function='member' level='[none:Name (copy)_1656198776925683712:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:Name (copy)_1656198776925683712:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+            <format attr='band-size' scope='cols' value='0' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='col-width' value='180' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='true' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+            <format attr='enabled' id='parks' value='false' />
+            <format attr='enabled' id='landcover_wood' value='false' />
+            <format attr='enabled' id='landcover_scrub' value='false' />
+            <format attr='enabled' id='landcover_grass' value='false' />
+            <format attr='enabled' id='landcover_crop' value='false' />
+            <format attr='enabled' id='place-village' value='true' />
+            <format attr='enabled' id='place-town' value='true' />
+            <format attr='enabled' id='place-islands' value='true' />
+            <format attr='enabled' id='place-islands-2' value='true' />
+            <format attr='enabled' id='place-city-sm' value='true' />
+            <format attr='enabled' id='place-city-md-s' value='true' />
+            <format attr='enabled' id='place-city-md-n' value='true' />
+            <format attr='enabled' id='place-city-lg-s' value='true' />
+            <format attr='enabled' id='place-city-lg-n' value='true' />
+            <format attr='enabled' id='place-capital-s' value='true' />
+            <format attr='enabled' id='place-capital-n' value='true' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.039999999105930328' />
+            <format attr='map-style' value='normal' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='area-green-light' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <lod column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:name:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>City:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:name:nk]>]]></run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.2413811683654785' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1py5g801o9mq9g159ux2j0ktzrj5].[avg:latitude:qk]</rows>
+        <cols>[federated.1py5g801o9mq9g159ux2j0ktzrj5].[avg:longitude:qk]</cols>
+      </table>
+      <simple-id uuid='{2099B4C7-BABF-4BAF-94D3-79E6E10D3662}' />
+    </worksheet>
+    <worksheet name='Items Category in Stock'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Multiple Connections' name='federated.1py5g801o9mq9g159ux2j0ktzrj5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1py5g801o9mq9g159ux2j0ktzrj5'>
+            <column-instance column='[id (inventory!items)]' derivation='CountD' name='[ctd:id (inventory!items):qk]' pivot='key' type='quantitative' />
+            <column caption='Id (Inventory!Items)' datatype='integer' name='[id (inventory!items)]' role='dimension' type='ordinal' />
+            <column caption='City' datatype='string' name='[name]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column-instance column='[name]' derivation='None' name='[none:name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[product_category]' derivation='None' name='[none:product_category:nk]' pivot='key' type='nominal' />
+            <column caption='Product Category' datatype='string' name='[product_category]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:name:nk]' value='66' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='4' />
+            <format attr='border-color' value='#e6e6e6' />
+            <format attr='border-style' scope='rows' value='dashed' />
+            <format attr='border-style' scope='cols' value='dotted' />
+            <format attr='border-width' scope='rows' value='1' />
+            <format attr='border-width' scope='cols' value='1' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:name:nk]' value='-90' />
+            <format attr='wrap' field='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:name:nk]' value='auto' />
+            <format attr='text-align' field='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:name:nk]' value='center' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[ctd:id (inventory!items):qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+            <format attr='font-size' value='12' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[ctd:id (inventory!items):qk]' />
+              <text column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[ctd:id (inventory!items):qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+                <format attr='has-stroke' value='false' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:product_category:nk]</rows>
+        <cols>[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:name:nk]</cols>
+      </table>
+      <simple-id uuid='{64DF7AB4-0100-4DD8-AFD0-280F96525F6E}' />
+    </worksheet>
+    <worksheet name='Items in Stok What-if'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Multiple Connections' name='federated.1py5g801o9mq9g159ux2j0ktzrj5' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Item Cut %' datatype='real' default-format='p0%' name='[Category Parameter]' param-domain-type='range' role='measure' type='quantitative' value='0.'>
+              <calculation class='tableau' formula='0.' />
+              <range granularity='0.05' max='1.0' min='0.0' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1py5g801o9mq9g159ux2j0ktzrj5'>
+            <column caption='Item cut what-if' datatype='real' name='[Calculation_938719061677752320]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([id (inventory!items)])*(1-[Parameters].[Category Parameter])' />
+            </column>
+            <column-instance column='[sold_at]' derivation='Count' name='[cnt:sold_at:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[id (inventory!items)]' derivation='CountD' name='[ctd:id (inventory!items):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[sold_at]' derivation='CountD' name='[ctd:sold_at:qk]' pivot='key' type='quantitative' />
+            <column caption='Id (Inventory!Items)' datatype='integer' name='[id (inventory!items)]' role='dimension' type='ordinal' />
+            <column caption='City' datatype='string' name='[name]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column-instance column='[product_category]' derivation='None' name='[none:product_category:nk]' pivot='key' type='nominal' />
+            <column caption='Product Category' datatype='string' name='[product_category]' role='dimension' type='nominal' />
+            <column caption='Sold At' datatype='string' name='[sold_at]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_938719061677752320]' derivation='User' name='[usr:Calculation_938719061677752320:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1py5g801o9mq9g159ux2j0ktzrj5].[usr:Calculation_938719061677752320:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1py5g801o9mq9g159ux2j0ktzrj5].[cnt:sold_at:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.1py5g801o9mq9g159ux2j0ktzrj5].[usr:Calculation_938719061677752320:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1py5g801o9mq9g159ux2j0ktzrj5].[ctd:sold_at:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[Action (City)]'>
+            <groupfilter function='level-members' level='[name]' user:ui-action-filter='[Action3_63A7EEFA49C24229B8250DB4575F3BF2]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:product_category:nk]'>
+            <groupfilter function='level-members' level='[none:product_category:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <computed-sort column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:product_category:nk]' direction='DESC' using='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[ctd:id (inventory!items):qk]' />
+          <slices>
+            <column>[federated.1py5g801o9mq9g159ux2j0ktzrj5].[:Measure Names]</column>
+            <column>[federated.1py5g801o9mq9g159ux2j0ktzrj5].[Action (City)]</column>
+            <column>[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:product_category:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='tick-color' field='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[Multiple Values]' value='#00000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:product_category:nk]' value='152' />
+            <format attr='border-width' data-class='total' scope='cols' value='0' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+            <format attr='border-width' data-class='total' scope='rows' value='0' />
+            <format attr='border-style' data-class='total' scope='rows' value='none' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[:Measure Names]' value='false' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[ctd:id (inventory!items):qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' scope='cols' value='0' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+            <format attr='border-width' data-class='total' scope='rows' value='0' />
+            <format attr='border-style' data-class='total' scope='rows' value='none' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='stroke-color' id='refline0' value='#e15759' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='div-level' scope='cols' value='0' />
+            <format attr='stroke-size' scope='rows' value='1' />
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+          </style-rule>
+          <style-rule element='header-div'>
+            <format attr='stroke-size' scope='rows' value='1' />
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[:Measure Names]' value='Items Legend&#10;' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:product_category:nk]' value='Product Category'>
+              <formatted-text>
+                <run>Product Category</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[:Measure Names]' />
+              <text column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:product_category:nk] / [federated.1py5g801o9mq9g159ux2j0ktzrj5].[:Measure Names])</rows>
+        <cols>[federated.1py5g801o9mq9g159ux2j0ktzrj5].[Multiple Values]</cols>
+      </table>
+      <simple-id uuid='{6A539F70-E599-4EEA-9D12-637A70D53E26}' />
+    </worksheet>
+    <worksheet name='Items in Stok [by category]'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Multiple Connections' name='federated.1py5g801o9mq9g159ux2j0ktzrj5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1py5g801o9mq9g159ux2j0ktzrj5'>
+            <column-instance column='[id (inventory!items)]' derivation='CountD' name='[ctd:id (inventory!items):qk]' pivot='key' type='quantitative' />
+            <column caption='Id (Inventory!Items)' datatype='integer' name='[id (inventory!items)]' role='dimension' type='ordinal' />
+            <column caption='City' datatype='string' name='[name]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column-instance column='[product_category]' derivation='None' name='[none:product_category:nk]' pivot='key' type='nominal' />
+            <column caption='Product Category' datatype='string' name='[product_category]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[Action (City)]'>
+            <groupfilter function='level-members' level='[name]' user:ui-action-filter='[Action2_5D99F482A83B48369B16E856AFD338C9]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <computed-sort column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:product_category:nk]' direction='DESC' using='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[ctd:id (inventory!items):qk]' />
+          <slices>
+            <column>[federated.1py5g801o9mq9g159ux2j0ktzrj5].[Action (City)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='204' />
+            <format attr='height' field='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:product_category:nk]' value='21' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:product_category:nk]' value='232' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[ctd:id (inventory!items):qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[ctd:id (inventory!items):qk]' />
+              <text column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[ctd:id (inventory!items):qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='has-stroke' value='false' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows total='true'>[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:product_category:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{EAFD14C8-3E5B-41C9-8EE4-C9D8514D0D6F}' />
+    </worksheet>
+    <worksheet name='Pie Chart'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Multiple Connections' name='federated.1py5g801o9mq9g159ux2j0ktzrj5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1py5g801o9mq9g159ux2j0ktzrj5'>
+            <column-instance column='[id (inventory!items)]' derivation='Count' name='[cnt:id (inventory!items):qk]' pivot='key' type='quantitative' />
+            <column caption='Id (Inventory!Items)' datatype='integer' name='[id (inventory!items)]' role='dimension' type='ordinal' />
+            <column-instance column='[shipped_at]' derivation='Max' name='[max:shipped_at:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[shipped_at]' derivation='Min' name='[min:shipped_at:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[status]' derivation='None' name='[none:status:nk]' pivot='key' type='nominal' />
+            <column caption='Shipped At' datatype='datetime' name='[shipped_at]' role='dimension' type='ordinal' />
+            <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+            <column-instance column='[shipped_at]' derivation='Year-Trunc' name='[tyr:shipped_at:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:status:nk]'>
+            <groupfilter function='level-members' level='[none:status:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:status:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='line-pattern-only' value='solid' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:status:nk]' value='693' />
+            <format attr='width' value='292' />
+            <format attr='border-width' scope='cols' value='0' />
+            <format attr='border-style' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:status:nk]' value='10' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:status:nk]' value='false' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='line-pattern-only' value='solid' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[tyr:shipped_at:ok]' />
+              <wedge-size column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[cnt:id (inventory!items):qk]' />
+              <tooltip column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[min:shipped_at:ok]' />
+              <tooltip column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[max:shipped_at:ok]' />
+              <text column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[tyr:shipped_at:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:status:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{32B1F85E-F036-452F-8157-3015BB9DA11F}' />
+    </worksheet>
+    <worksheet name='Status Performance WB'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Multiple Connections' name='federated.1py5g801o9mq9g159ux2j0ktzrj5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1py5g801o9mq9g159ux2j0ktzrj5'>
+            <column-instance column='[id (inventory!items)]' derivation='CountD' name='[ctd:id (inventory!items):qk]' pivot='key' type='quantitative' />
+            <column caption='Id (Inventory!Items)' datatype='integer' name='[id (inventory!items)]' role='dimension' type='ordinal' />
+            <column caption='City' datatype='string' name='[name]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column-instance column='[name]' derivation='None' name='[none:name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[status]' derivation='None' name='[none:status:nk]' pivot='key' type='nominal' />
+            <column caption='Shipped At' datatype='datetime' name='[shipped_at]' role='dimension' type='ordinal' />
+            <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+            <column-instance column='[shipped_at]' derivation='Year' name='[yr:shipped_at:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[Exclusions (Status,YEAR(Shipped At))]' filter-group='3'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='crossjoin'>
+                <groupfilter function='level-members' level='[none:status:nk]' />
+                <groupfilter function='level-members' level='[yr:shipped_at:ok]' />
+              </groupfilter>
+              <groupfilter function='reorder-dimensionality'>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[yr:shipped_at:ok]' member='%null%' />
+                  <groupfilter function='union'>
+                    <groupfilter function='member' level='[none:status:nk]' member='%null%' />
+                    <groupfilter function='member' level='[none:status:nk]' member='&quot;Cancelled&quot;' />
+                    <groupfilter function='member' level='[none:status:nk]' member='&quot;Processing&quot;' />
+                  </groupfilter>
+                </groupfilter>
+                <order>
+                  <hierarchy name='[none:status:nk]' />
+                  <hierarchy name='[yr:shipped_at:ok]' />
+                </order>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:name:nk]'>
+            <groupfilter function='level-members' level='[none:name:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:status:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:status:nk]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[none:status:nk]' member='%null%' />
+                <groupfilter function='member' level='[none:status:nk]' member='%null%' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <alphabetic-sort column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:status:nk]' direction='DESC' />
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:name:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[ctd:id (inventory!items):qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:status:nk]</column>
+            <column>[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:name:nk]</column>
+            <column>[federated.1py5g801o9mq9g159ux2j0ktzrj5].[Exclusions (Status,YEAR(Shipped At))]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[ctd:id (inventory!items):qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#f7f7f0' />
+            <format attr='stroke-color' id='refline0' value='#f28e2b' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <encodings>
+              <color column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:name:nk]' />
+              <text column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[ctd:id (inventory!items):qk]' />
+            </encodings>
+            <reference-line axis-column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[ctd:id (inventory!items):qk]' enable-instant-analytics='true' formula='average' id='refline0' label='Avg Item per Status' label-type='custom' probability='95' scope='per-pane' value-column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[ctd:id (inventory!items):qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:status:nk] / [federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:name:nk])</rows>
+        <cols>[federated.1py5g801o9mq9g159ux2j0ktzrj5].[ctd:id (inventory!items):qk]</cols>
+      </table>
+      <simple-id uuid='{C350E331-FF40-434F-9C86-72FE152C2E96}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Geo Items/Cat'>
+      <style />
+      <size maxheight='768' maxwidth='1366' minheight='768' minwidth='1366' preset-index='0' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='Multiple Connections' name='federated.1py5g801o9mq9g159ux2j0ktzrj5' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1py5g801o9mq9g159ux2j0ktzrj5'>
+        <column caption='City' datatype='string' name='[name]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+        <column-instance column='[name]' derivation='None' name='[none:name:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97916' id='13' param='horz' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='97916' id='7' param='horz' type-v2='layout-flow' w='98828' x='586' y='1042'>
+              <zone h='97916' id='5' type-v2='layout-basic' w='63982' x='586' y='1042'>
+                <zone h='76690' id='3' name='Distribution Centers Geo' show-title='false' w='63982' x='586' y='12500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='92' h='9768' id='8' is-fixed='true' name='Distribution Centers Geo' pane-specification-id='0' type-v2='map' w='63982' x='586' y='89190'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='11458' id='47' type-v2='text' w='63982' x='586' y='1042'>
+                  <formatted-text>
+                    <run fontcolor='#000000' fontname='Tableau Bold' fontsize='18'>Distribuzione delle scorte</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone fixed-size='476' h='97916' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='34846' x='64568' y='1042'>
+                <zone fixed-size='654' h='86198' id='9' is-fixed='true' name='Items in Stok [by category]' w='34846' x='64568' y='1042'>
+                  <layout-cache fixed-size-w='438' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='5729' id='14' mode='dropdown' name='Distribution Centers Geo' param='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:name:nk]' type-v2='filter' values='database' w='11713' x='52196' y='81901' />
+        <zone h='130' id='50' param='vert' type-v2='layout-flow' w='25622' x='1245' y='9115'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#d4d4d4' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='800' minheight='800' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='68' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='67' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+                <zone forceUpdate='true' h='11458' id='47' type-v2='text' w='63982' x='586' y='1042'>
+                  <formatted-text>
+                    <run fontcolor='#000000' fontname='Tableau Bold' fontsize='18'>Distribuzione delle scorte</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='86198' id='9' is-fixed='true' name='Items in Stok [by category]' w='34846' x='64568' y='1042'>
+                  <layout-cache fixed-size-w='438' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5729' id='14' mode='dropdown' name='Distribution Centers Geo' param='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:name:nk]' type-v2='filter' values='database' w='11713' x='52196' y='81901'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='76690' id='3' is-fixed='true' name='Distribution Centers Geo' show-title='false' w='63982' x='586' y='12500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='92' h='9768' id='8' name='Distribution Centers Geo' pane-specification-id='0' type-v2='map' w='63982' x='586' y='89190'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{88DE515B-54EB-4410-94C2-13CAE7FA3054}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Heatmap items'>
+      <style>
+        <style-rule element='dash-text'>
+          <format attr='vertical-align' id='dash-text_9' value='top' />
+          <format attr='vertical-align' id='dash-text_34' value='top' />
+        </style-rule>
+      </style>
+      <size maxheight='768' maxwidth='1366' minheight='768' minwidth='1366' preset-index='0' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97916' id='7' param='horz' type-v2='layout-flow' w='67350' x='32064' y='1042'>
+            <zone h='97916' id='5' type-v2='layout-basic' w='67350' x='32064' y='1042'>
+              <zone h='97916' id='3' name='Items Category in Stock' show-title='false' w='67350' x='32064' y='1042'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone forceUpdate='true' h='9114' id='9' type-v2='text' w='31478' x='586' y='1042'>
+            <formatted-text>
+              <run fontcolor='#000000' fontname='Tableau Bold' fontsize='18'>Heatmap Dei prodotti</run>
+              <run>Æ&#10;&#10;</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='88802' id='34' type-v2='text' w='31478' x='586' y='10156'>
+            <formatted-text>
+              <run bold='true' fontsize='14'>Intimates</run>
+              <run fontsize='14'> e </run>
+              <run bold='true' fontsize='14'>Swim</run>
+              <run fontsize='14'> sono categorie di prodotti che si concentrano maggiormente in singoli magazzini.</run>
+              <run>Æ&#10;&#10;</run>
+              <run bold='true' fontsize='14'>Savannah GA</run>
+              <run fontsize='14'> risulta essere il magazzino meno diversificato nonostante sia geograficamente ben posizionato.</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='130' id='35' type-v2='empty' w='29283' x='1025' y='6901'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#c0c0c0' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='51' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='50' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+                <zone forceUpdate='true' h='9114' id='9' type-v2='text' w='31478' x='586' y='1042'>
+                  <formatted-text>
+                    <run fontcolor='#000000' fontname='Tableau Bold' fontsize='18'>Heatmap Dei prodotti</run>
+                    <run>Æ&#10;&#10;</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='97916' id='3' is-fixed='true' name='Items Category in Stock' show-title='false' w='67350' x='32064' y='1042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='88802' id='34' type-v2='text' w='31478' x='586' y='10156'>
+                  <formatted-text>
+                    <run bold='true' fontsize='14'>Intimates</run>
+                    <run fontsize='14'> e </run>
+                    <run bold='true' fontsize='14'>Swim</run>
+                    <run fontsize='14'> sono categorie di prodotti che si concentrano maggiormente in singoli magazzini.</run>
+                    <run>Æ&#10;&#10;</run>
+                    <run bold='true' fontsize='14'>Savannah GA</run>
+                    <run fontsize='14'> risulta essere il magazzino meno diversificato nonostante sia geograficamente ben posizionato.</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{EA45C272-A7B3-4054-BBD4-1191163CC194}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Item Stock What-If'>
+      <style />
+      <size maxheight='768' maxwidth='1366' minheight='768' minwidth='1366' preset-index='0' sizing-mode='fixed' />
+      <datasources>
+        <datasource name='Parameters' />
+        <datasource caption='Multiple Connections' name='federated.1py5g801o9mq9g159ux2j0ktzrj5' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Item Cut %' datatype='real' default-format='p0%' name='[Category Parameter]' param-domain-type='range' role='measure' type='quantitative' value='0.'>
+          <calculation class='tableau' formula='0.' />
+          <range granularity='0.05' max='1.0' min='0.0' />
+        </column>
+      </datasource-dependencies>
+      <datasource-dependencies datasource='federated.1py5g801o9mq9g159ux2j0ktzrj5'>
+        <column caption='City' datatype='string' name='[name]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+        <column-instance column='[name]' derivation='None' name='[none:name:nk]' pivot='key' type='nominal' />
+        <column-instance column='[product_category]' derivation='None' name='[none:product_category:nk]' pivot='key' type='nominal' />
+        <column caption='Product Category' datatype='string' name='[product_category]' role='dimension' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97916' id='50' param='horz' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='97916' id='13' type-v2='layout-basic' w='98828' x='586' y='1042'>
+              <zone h='77994' id='3' name='Distribution Centers Geo' show-title='false' w='41652' x='586' y='20964'>
+                <layout-cache minheight='244' minwidth='202' type-h='scalable' type-w='scalable' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='82812' id='28' name='Items in Stok What-if' show-title='false' w='57176' x='42238' y='16146'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='10807' id='31' mode='slider' param='[Parameters].[Category Parameter]' type-v2='paramctrl' w='57176' x='42238' y='1042'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone forceUpdate='true' h='10807' id='36' type-v2='text' w='41652' x='586' y='1042'>
+                <formatted-text>
+                  <run fontcolor='#000000' fontname='Tableau Bold' fontsize='18'>Item Stock What-If</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='9115' id='52' type-v2='text' w='41652' x='586' y='11849'>
+                <formatted-text>
+                  <run fontsize='11'>Utilizzando i parametri </run>
+                  <run bold='true' fontsize='11'>Item Cut %</run>
+                  <run fontsize='11'> e il menù a tendina </run>
+                  <run bold='true' fontsize='11'>Product Category</run>
+                  <run fontsize='11'> possiamo costruire degli scenari per il bilanciamento delle scorte, tenendo conto delle merci vendute per i magazzini.</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='4297' id='54' type-v2='empty' w='57176' x='42238' y='11849'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='5729' id='19' mode='dropdown' name='Distribution Centers Geo' param='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:name:nk]' type-v2='filter' values='database' w='11713' x='29868' y='92188' />
+        <zone h='130' id='53' param='vert' type-v2='layout-flow' w='33309' x='1171' y='8854'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#d4d4d4' />
+          </zone-style>
+        </zone>
+        <zone h='5729' id='51' mode='checkdropdown' name='Items in Stok What-if' param='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:product_category:nk]' type-v2='filter' values='relevant' w='56223' x='42679' y='10156' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='900' minheight='900' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='72' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='71' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+                <zone forceUpdate='true' h='10807' id='36' type-v2='text' w='41652' x='586' y='1042'>
+                  <formatted-text>
+                    <run fontcolor='#000000' fontname='Tableau Bold' fontsize='18'>Item Stock What-If</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='10807' id='31' mode='slider' param='[Parameters].[Category Parameter]' type-v2='paramctrl' w='57176' x='42238' y='1042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9115' id='52' type-v2='text' w='41652' x='586' y='11849'>
+                  <formatted-text>
+                    <run fontsize='11'>Utilizzando i parametri </run>
+                    <run bold='true' fontsize='11'>Item Cut %</run>
+                    <run fontsize='11'> e il menù a tendina </run>
+                    <run bold='true' fontsize='11'>Product Category</run>
+                    <run fontsize='11'> possiamo costruire degli scenari per il bilanciamento delle scorte, tenendo conto delle merci vendute per i magazzini.</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5729' id='51' mode='checkdropdown' name='Items in Stok What-if' param='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:product_category:nk]' type-v2='filter' values='relevant' w='56223' x='42679' y='10156'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='82812' id='28' is-fixed='true' name='Items in Stok What-if' show-title='false' w='57176' x='42238' y='16146'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5729' id='19' mode='dropdown' name='Distribution Centers Geo' param='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:name:nk]' type-v2='filter' values='database' w='11713' x='29868' y='92188'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='77994' id='3' is-fixed='true' name='Distribution Centers Geo' show-title='false' w='41652' x='586' y='20964'>
+                  <layout-cache minheight='244' minwidth='202' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{8C2F4E60-CB8E-47C2-9970-179A707AD083}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Slide Presentazione 1'>
+      <style />
+      <size maxheight='768' maxwidth='1366' minheight='768' minwidth='1366' preset-index='0' sizing-mode='fixed' />
+      <zones>
+        <zone h='130' id='10' param='vert' type-v2='layout-flow' w='51245' x='1098' y='14714'>
+          <zone h='130' id='33' type-v2='text' w='51245' x='1098' y='14714'>
+            <formatted-text>
+              <run bold='true' fontcolor='#000000' fontsize='18'>Strumenti utilizzati</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#d4d4d4' />
+          </zone-style>
+        </zone>
+        <zone forceUpdate='true' h='11589' id='3' type-v2='text' w='52416' x='805' y='2995'>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Tableau Bold' fontsize='20'>Capstone Project: E-Commerce/Marketing Setting</run>
+            <run>Æ&#10;&#10;</run>
+            <run fontcolor='#000000' fontsize='11'>Gruppo Data Analyst: Luca Vanzetti, Michele Ragno, Benedetta Pollastrini e Daniele Coroneo</run>
+            <run>Æ&#10;&#10;</run>
+          </formatted-text>
+        </zone>
+        <zone h='13411' id='19' is-centered='0' is-scaled='1' param='C:/Users/mikir/Desktop/Boolean - Data Analytics/Boolean-Data-Analytics/Capstone Project/data/img/TheLook_LOGO.PNG' type-v2='bitmap' w='13470' x='85944' y='781' />
+        <zone forceUpdate='true' h='32943' id='20' type-v2='text' w='52050' x='805' y='16276'>
+          <formatted-text>
+            <run fontcolor='#000000' fontsize='12'>Al nostro gruppo di Data Analiys è stato richiesto di </run>
+            <run bold='true' fontcolor='#000000' fontsize='12'>effettuare una analisi completa sull&apos;andamento dell&apos;attività del business di e-commerce</run>
+            <run fontcolor='#000000' fontsize='12'>. </run>
+            <run>Æ&#10;&#10;</run>
+            <run fontcolor='#000000' fontsize='12'>Nello specifico ci è stato richiesto di concentrare lo studio sui seguenti ambiti: </run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#000000' fontsize='12'> • Andamento delle vendite</run>
+            <run>Æ&#10;&#10;</run>
+            <run fontcolor='#000000' fontsize='12'> • Scorte dei prodotti nei magazzini </run>
+            <run>Æ&#10;&#10;</run>
+            <run fontcolor='#000000' fontsize='12'> • Analisi performance dei prodotti</run>
+            <run>Æ&#10;&#10;</run>
+            <run fontcolor='#000000' fontsize='12'> • Studio demografico customer-base</run>
+            <run>Æ&#10;&#10;</run>
+          </formatted-text>
+        </zone>
+        <zone h='15495' id='27' is-centered='0' is-scaled='1' param='C:/Users/mikir/Desktop/Boolean - Data Analytics/Boolean-Data-Analytics/Capstone Project/data/img/google-big-query.png' type-v2='bitmap' w='31845' x='2416' y='70052' />
+        <zone h='19922' id='29' is-centered='0' is-scaled='1' param='C:/Users/mikir/Desktop/Boolean - Data Analytics/Boolean-Data-Analytics/Capstone Project/data/img/logo-del-linguaggio-di-programmazione-python-2.png' type-v2='bitmap' w='30820' x='35432' y='68750' />
+        <zone h='24349' id='30' is-centered='0' is-scaled='1' param='C:/Users/mikir/Desktop/Boolean - Data Analytics/Boolean-Data-Analytics/Capstone Project/data/img/Tableau-Logo.png' type-v2='bitmap' w='28184' x='69766' y='63932' />
+        <zone forceUpdate='true' h='5469' id='34' type-v2='text' w='14495' x='1025' y='54557'>
+          <formatted-text>
+            <run fontname='Tableau Bold' fontsize='14'>Strumenti Utilizzati</run>
+          </formatted-text>
+        </zone>
+        <zone h='130' id='35' param='vert' type-v2='layout-flow' w='51245' x='1171' y='60807'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#d4d4d4' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='900' minheight='900' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='87' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='86' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+                <zone fixed-size='103' h='13411' id='19' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/mikir/Desktop/Boolean - Data Analytics/Boolean-Data-Analytics/Capstone Project/data/img/TheLook_LOGO.PNG' type-v2='bitmap' w='13470' x='85944' y='781'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='11589' id='3' type-v2='text' w='52416' x='805' y='2995'>
+                  <formatted-text>
+                    <run fontcolor='#000000' fontname='Tableau Bold' fontsize='20'>Capstone Project: E-Commerce/Marketing Setting</run>
+                    <run>Æ&#10;&#10;</run>
+                    <run fontcolor='#000000' fontsize='11'>Gruppo Data Analyst: Luca Vanzetti, Michele Ragno, Benedetta Pollastrini e Daniele Coroneo</run>
+                    <run>Æ&#10;&#10;</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='130' id='33' type-v2='text' w='51245' x='1098' y='14714'>
+                  <formatted-text>
+                    <run bold='true' fontcolor='#000000' fontsize='18'>Strumenti utilizzati</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='32943' id='20' type-v2='text' w='52050' x='805' y='16276'>
+                  <formatted-text>
+                    <run fontcolor='#000000' fontsize='12'>Al nostro gruppo di Data Analiys è stato richiesto di </run>
+                    <run bold='true' fontcolor='#000000' fontsize='12'>effettuare una analisi completa sull&apos;andamento dell&apos;attività del business di e-commerce</run>
+                    <run fontcolor='#000000' fontsize='12'>. </run>
+                    <run>Æ&#10;&#10;</run>
+                    <run fontcolor='#000000' fontsize='12'>Nello specifico ci è stato richiesto di concentrare lo studio sui seguenti ambiti: </run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#000000' fontsize='12'> • Andamento delle vendite</run>
+                    <run>Æ&#10;&#10;</run>
+                    <run fontcolor='#000000' fontsize='12'> • Scorte dei prodotti nei magazzini </run>
+                    <run>Æ&#10;&#10;</run>
+                    <run fontcolor='#000000' fontsize='12'> • Analisi performance dei prodotti</run>
+                    <run>Æ&#10;&#10;</run>
+                    <run fontcolor='#000000' fontsize='12'> • Studio demografico customer-base</run>
+                    <run>Æ&#10;&#10;</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='5469' id='34' type-v2='text' w='14495' x='1025' y='54557'>
+                  <formatted-text>
+                    <run fontname='Tableau Bold' fontsize='14'>Strumenti Utilizzati</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='187' h='24349' id='30' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/mikir/Desktop/Boolean - Data Analytics/Boolean-Data-Analytics/Capstone Project/data/img/Tableau-Logo.png' type-v2='bitmap' w='28184' x='69766' y='63932'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='153' h='19922' id='29' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/mikir/Desktop/Boolean - Data Analytics/Boolean-Data-Analytics/Capstone Project/data/img/logo-del-linguaggio-di-programmazione-python-2.png' type-v2='bitmap' w='30820' x='35432' y='68750'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='119' h='15495' id='27' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/mikir/Desktop/Boolean - Data Analytics/Boolean-Data-Analytics/Capstone Project/data/img/google-big-query.png' type-v2='bitmap' w='31845' x='2416' y='70052'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{4CCCE52A-3370-4193-9856-756E752929C4}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='So..What?'>
+      <style>
+        <style-rule element='dash-text'>
+          <format attr='vertical-align' id='dash-text_6' value='top' />
+        </style-rule>
+      </style>
+      <size maxheight='768' maxwidth='1366' minheight='768' minwidth='1366' preset-index='0' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone forceUpdate='true' h='18489' id='3' type-v2='text' w='84553' x='586' y='1042'>
+            <formatted-text>
+              <run fontcolor='#000000' fontname='Tableau Bold' fontsize='20'>Recap: So... what?</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='97916' id='5' is-centered='0' is-scaled='1' param='C:/Users/mikir/Desktop/Boolean - Data Analytics/Boolean-Data-Analytics/Capstone Project/data/img/TheLook_LOGO.PNG' type-v2='bitmap' w='14275' x='85139' y='1042'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone forceUpdate='true' h='59505' id='6' type-v2='text' w='84553' x='586' y='19531'>
+            <formatted-text>
+              <run bold='true' fontcolor='#4a4a4a' fontsize='14'>Distribuzione delle scorte</run>
+              <run fontcolor='#4a4a4a' fontsize='14'>:</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#4a4a4a' fontsize='14'>• Si consiglia al Business di; riditribuire le scorte di prodotti delle categorie </run>
+              <run bold='true' fontcolor='#4a4a4a' fontsize='14'>Intimates</run>
+              <run fontcolor='#4a4a4a' fontsize='14'> e </run>
+              <run bold='true' fontcolor='#4a4a4a' fontsize='14'>Swim</run>
+              <run fontcolor='#4a4a4a' fontsize='14'>, utilizzando la </run>
+              <run fontcolor='#4a4a4a' fontsize='14' italic='true'>What-if dashboard</run>
+              <run fontcolor='#4a4a4a' fontsize='14'>. Oppure richiedere un ulteriore analisi per comprendere più nel dettaglio come distribuire meglio le scorte per singolo prodotto.</run>
+              <run>Æ&#10;&#10;</run>
+              <run fontcolor='#4a4a4a' fontsize='14'>• Rifornire e diversificare meglio il magazzino situato in </run>
+              <run bold='true' fontcolor='#4a4a4a' fontsize='14'>Savannah</run>
+              <run fontcolor='#4a4a4a' fontsize='14'> in quanto scarso di prodotti rispetto alla media.</run>
+              <run>Æ&#10;&#10;</run>
+              <run bold='true' fontcolor='#4a4a4a' fontsize='14'>Performance sul processo di consegna</run>
+              <run fontcolor='#4a4a4a' fontsize='14'>:</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#4a4a4a' fontsize='14'>• Si consiglia al Business di; lanciare una campagna di rintracciamento delle merci &quot;non concluse&quot; degli anni precendenti.</run>
+              <run>Æ&#10;&#10;</run>
+              <run fontcolor='#4a4a4a' fontsize='14'> • Sollecitare i magazzini per una corretta procedura di consegna merci completata.</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone forceUpdate='' h='19922' id='7' param='https://github.com/DrBracket/Capstone-Prj-DA_Group-1/blob/main/Capstone%20Project/Capstone%20PRJ.ipynb' type-v2='web' w='84553' x='586' y='79036'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='24' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='23' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+                <zone forceUpdate='true' h='18489' id='3' type-v2='text' w='84553' x='586' y='1042'>
+                  <formatted-text>
+                    <run fontcolor='#000000' fontname='Tableau Bold' fontsize='20'>Recap: So... what?</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='97916' id='5' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/mikir/Desktop/Boolean - Data Analytics/Boolean-Data-Analytics/Capstone Project/data/img/TheLook_LOGO.PNG' type-v2='bitmap' w='14275' x='85139' y='1042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='59505' id='6' type-v2='text' w='84553' x='586' y='19531'>
+                  <formatted-text>
+                    <run bold='true' fontcolor='#4a4a4a' fontsize='14'>Distribuzione delle scorte</run>
+                    <run fontcolor='#4a4a4a' fontsize='14'>:</run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#4a4a4a' fontsize='14'>• Si consiglia al Business di; riditribuire le scorte di prodotti delle categorie </run>
+                    <run bold='true' fontcolor='#4a4a4a' fontsize='14'>Intimates</run>
+                    <run fontcolor='#4a4a4a' fontsize='14'> e </run>
+                    <run bold='true' fontcolor='#4a4a4a' fontsize='14'>Swim</run>
+                    <run fontcolor='#4a4a4a' fontsize='14'>, utilizzando la </run>
+                    <run fontcolor='#4a4a4a' fontsize='14' italic='true'>What-if dashboard</run>
+                    <run fontcolor='#4a4a4a' fontsize='14'>. Oppure richiedere un ulteriore analisi per comprendere più nel dettaglio come distribuire meglio le scorte per singolo prodotto.</run>
+                    <run>Æ&#10;&#10;</run>
+                    <run fontcolor='#4a4a4a' fontsize='14'>• Rifornire e diversificare meglio il magazzino situato in </run>
+                    <run bold='true' fontcolor='#4a4a4a' fontsize='14'>Savannah</run>
+                    <run fontcolor='#4a4a4a' fontsize='14'> in quanto scarso di prodotti rispetto alla media.</run>
+                    <run>Æ&#10;&#10;</run>
+                    <run bold='true' fontcolor='#4a4a4a' fontsize='14'>Performance sul processo di consegna</run>
+                    <run fontcolor='#4a4a4a' fontsize='14'>:</run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#4a4a4a' fontsize='14'>• Si consiglia al Business di; lanciare una campagna di rintracciamento delle merci &quot;non concluse&quot; degli anni precendenti.</run>
+                    <run>Æ&#10;&#10;</run>
+                    <run fontcolor='#4a4a4a' fontsize='14'> • Sollecitare i magazzini per una corretta procedura di consegna merci completata.</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='145' forceUpdate='' h='19922' id='7' is-fixed='true' param='https://github.com/DrBracket/Capstone-Prj-DA_Group-1/blob/main/Capstone%20Project/Capstone%20PRJ.ipynb' type-v2='web' w='84553' x='586' y='79036'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{64199C7D-40D7-4271-B7C1-7B82091ECC29}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Status Performance'>
+      <style />
+      <size maxheight='768' maxwidth='1366' minheight='768' minwidth='1366' preset-index='0' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='Multiple Connections' name='federated.1py5g801o9mq9g159ux2j0ktzrj5' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1py5g801o9mq9g159ux2j0ktzrj5'>
+        <column caption='City' datatype='string' name='[name]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+        <column-instance column='[name]' derivation='None' name='[none:name:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97916' id='29' param='horz' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='97916' id='11' type-v2='layout-basic' w='98828' x='586' y='1042'>
+              <zone h='97916' id='7' param='horz' type-v2='layout-flow' w='63250' x='36164' y='1042'>
+                <zone h='97916' id='5' type-v2='layout-basic' w='63250' x='36164' y='1042'>
+                  <zone h='97916' id='9' name='Status Performance WB' show-title='false' w='63250' x='36164' y='1042'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+              <zone forceUpdate='true' h='10937' id='22' type-v2='text' w='22751' x='586' y='1042'>
+                <formatted-text>
+                  <run fontcolor='#000000' fontname='Tableau Bold' fontsize='18'>Performance del Processo di Consegna Merci</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='86979' id='23' name='Bubble Chart' show-title='false' w='24377' x='586' y='11979'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='86979' id='31' name='Bubble Chart' pane-specification-id='0' param='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:status:nk]' type-v2='color' w='11201' x='24963' y='11979'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='10937' id='30' mode='checkdropdown' name='Status Performance WB' param='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:name:nk]' type-v2='filter' values='database' w='12827' x='23337' y='1042'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='130' id='34' param='vert' type-v2='layout-flow' w='21962' x='878' y='13021'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#e6e6e6' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='800' minheight='800' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='52' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='51' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+                <zone forceUpdate='true' h='10937' id='22' type-v2='text' w='22751' x='586' y='1042'>
+                  <formatted-text>
+                    <run fontcolor='#000000' fontname='Tableau Bold' fontsize='18'>Performance del Processo di Consegna Merci</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='10937' id='30' mode='checkdropdown' name='Status Performance WB' param='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:name:nk]' type-v2='filter' values='database' w='12827' x='23337' y='1042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='97916' id='9' is-fixed='true' name='Status Performance WB' show-title='false' w='63250' x='36164' y='1042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='86979' id='23' is-fixed='true' name='Bubble Chart' show-title='false' w='24377' x='586' y='11979'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='86979' id='31' name='Bubble Chart' pane-specification-id='0' param='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:status:nk]' type-v2='color' w='11201' x='24963' y='11979'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{D61B7CBE-B583-452F-B5DA-FD38E9512F60}' />
+    </dashboard>
+    <dashboard name='Storytell' type='storyboard'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98230' id='1' param='vert' removable='false' type-v2='layout-flow' w='99318' x='341' y='885'>
+            <zone h='11173' id='4' is-fixed='true' paired-zone-id='5' removable='false' type-v2='flipboard-nav' w='99318' x='341' y='885' />
+            <zone h='87057' id='5' paired-zone-id='4' removable='false' type-v2='flipboard' w='99318' x='341' y='12058'>
+              <flipboard active-id='5' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point caption='Slide di Presentazione + Intro al problema' captured-sheet='Slide Presentazione 1' id='1' />
+                  <story-point caption='Distribuzione delle scorte' captured-sheet='Geo Items/Cat' id='2' />
+                  <story-point caption='HeatMap delle categorie' captured-sheet='Heatmap items' id='3' />
+                  <story-point caption='What-if Ridistribuzione scorte' captured-sheet='Item Stock What-If' id='5' />
+                  <story-point caption='Analisi delle performance di consegne' captured-sheet='Status Performance' id='6'>
+                    <capturedDeltas>
+                      <worksheet name='Bubble Chart'>
+                        <filter class='categorical' column='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[Action (City,Status)]'>
+                          <groupfilter function='crossjoin' user:ui-enumeration='all' user:ui-marker='enumerate'>
+                            <groupfilter function='level-members' level='[name]' />
+                            <groupfilter function='level-members' level='[status]' />
+                          </groupfilter>
+                        </filter>
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                  <story-point caption='Recap - So.. What?' captured-sheet='So..What?' id='7' />
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{3C18C714-CA02-4D09-9AD7-107AC850A980}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Distribution Centers Geo'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' type='map' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <floating-toolbar-visibility value='1' />
+        <default-map-tool-selection tool='4' />
+      </viewpoint>
+      <simple-id uuid='{0B07D460-C290-4C60-96DA-EC5FEDA58810}' />
+    </window>
+    <window class='worksheet' name='Pie Chart'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[tyr:shipped_at:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{678816EB-8303-42D2-BD81-852508316785}' />
+    </window>
+    <window class='worksheet' name='Status Performance WB'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:name:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{3B15844E-EF04-4080-B047-13AE00D84892}' />
+    </window>
+    <window class='worksheet' name='Bubble Chart'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:status:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[none:status:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{252FA771-D4C3-42A9-BD6C-E6107A95548E}' />
+    </window>
+    <window class='worksheet' name='Items in Stok [by category]'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[ctd:id (inventory!items):qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E11E1E13-6BD2-486E-8D8B-A1EC42EFCF7E}' />
+    </window>
+    <window class='worksheet' name='Items Category in Stock'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[ctd:id (inventory!items):qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E0C59BC5-8F9F-4BD9-9E41-28D332BD0A4C}' />
+    </window>
+    <window class='worksheet' name='Items in Stok What-if'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1py5g801o9mq9g159ux2j0ktzrj5].[:Measure Names]' type='color' />
+            <card mode='slider' param='[Parameters].[Category Parameter]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E0F552BA-A8DA-432D-BE85-56B4C6B68AD9}' />
+    </window>
+    <window class='dashboard' name='Slide Presentazione 1' tab-color='#17927d'>
+      <viewpoints />
+      <active id='3' />
+      <simple-id uuid='{B5F50D49-8D9A-4161-8C19-EB8E1DCF38B0}' />
+    </window>
+    <window class='dashboard' name='Geo Items/Cat' tab-color='#17927d'>
+      <viewpoints>
+        <viewpoint name='Distribution Centers Geo'>
+          <zoom type='entire-view' />
+          <floating-toolbar-visibility value='1' />
+          <geo-search-visibility value='1' />
+          <default-map-tool-selection tool='2' />
+          <map-navigation value='1' />
+        </viewpoint>
+        <viewpoint name='Items in Stok [by category]' />
+      </viewpoints>
+      <active id='47' />
+      <simple-id uuid='{575727C1-C28A-45C4-BC74-98EACCCD081B}' />
+    </window>
+    <window class='dashboard' name='Heatmap items' tab-color='#17927d'>
+      <viewpoints>
+        <viewpoint name='Items Category in Stock' />
+      </viewpoints>
+      <active id='9' />
+      <simple-id uuid='{31E2D462-82F3-4E6C-9403-1828AA952745}' />
+    </window>
+    <window class='dashboard' name='Item Stock What-If' tab-color='#17927d'>
+      <viewpoints>
+        <viewpoint name='Distribution Centers Geo'>
+          <zoom type='entire-view' />
+          <floating-toolbar-visibility value='1' />
+        </viewpoint>
+        <viewpoint name='Items in Stok What-if' />
+      </viewpoints>
+      <active id='36' />
+      <simple-id uuid='{28381680-D9BE-40DA-8194-A36CA5288D1C}' />
+    </window>
+    <window class='dashboard' name='Status Performance' tab-color='#17927d'>
+      <viewpoints>
+        <viewpoint name='Bubble Chart'>
+          <zoom type='fit-height' />
+        </viewpoint>
+        <viewpoint name='Status Performance WB'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='23' />
+      <simple-id uuid='{D9E449E5-93C3-48F6-B08D-B18B25835740}' />
+    </window>
+    <window class='dashboard' name='So..What?' tab-color='#17927d'>
+      <viewpoints />
+      <active id='6' />
+      <simple-id uuid='{F0A1672E-5C33-409E-B51E-F89C3056E209}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Storytell' tab-color='#72bcbb'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{53491B44-6E3A-4ACF-9BEA-9BD0B3632D41}' />
+    </window>
+  </windows>
+</workbook>
